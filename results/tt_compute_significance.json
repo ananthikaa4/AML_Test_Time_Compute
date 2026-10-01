@@ -1,0 +1,30 @@
+{
+  "adaptive_vs_single": {
+    "n": 722,
+    "acc_a": 0.30193905817174516,
+    "acc_b": 0.30055401662049863,
+    "only_a_correct": 11,
+    "only_b_correct": 10,
+    "p_value": 1.0
+  },
+  "adaptive_vs_fixed16": {
+    "n": 722,
+    "acc_a": 0.3074792243767313,
+    "acc_b": 0.30055401662049863,
+    "only_a_correct": 5,
+    "only_b_correct": 0,
+    "p_value": 0.0625
+  },
+  "fixed16_vs_single": {
+    "n": 722,
+    "acc_a": 0.30193905817174516,
+    "acc_b": 0.3074792243767313,
+    "only_a_correct": 8,
+    "only_b_correct": 12,
+    "p_value": 0.5034446716308594
+  },
+  "thresholds_from_val": {
+    "conf_lo": 0.2494984090328217,
+    "conf_hi": 0.6543754100799563
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "config": {
+    "model_name": "law-ai/InLegalBERT",
+    "lr": 2e-05,
+    "head_lr": 0.001,
+    "batch_size": 32,
+    "max_epochs": 25,
+    "patience": 4,
+    "warmup_ratio": 0.06,
+    "weight_decay": 0.01,
+    "dropout": 0.1,
+    "label_smoothing": 0.0,
+    "max_length": 128,
+    "pooling": "cls",
+    "grad_clip": 1.0,
+    "seed": 43
+  },
+  "best_val_acc": 0.33378378378378376,
+  "best_epoch": 5,
+  "epochs_run": 9,
+  "train_seconds": 168.76098030002322,
+  "peak_gpu_mb": 3532.6,
+  "n_train": 5848,
+  "n_classes": 1932,
+  "history": [
+    {
+      "epoch": 1,
+      "train_loss": 7.312441184872487,
+      "val_loss": 6.396261692047119,
+      "val_acc": 0.03513513513513514,
+      "epoch_seconds": 18.368607999989763
+    },
+    {
+      "epoch": 2,
+      "train_loss": 5.613429332691464,
+      "val_loss": 4.098249435424805,
+      "val_acc": 0.19864864864864865,
+      "epoch_seconds": 18.77950200001942
+    },
+    {
+      "epoch": 3,
+      "train_loss": 3.5358535735333554,
+      "val_loss": 3.2881641387939453,
+      "val_acc": 0.28378378378378377,
+      "epoch_seconds": 18.33878819999518
+    },
+    {
+      "epoch": 4,
+      "train_loss": 2.248729976148553,
+      "val_loss": 3.1248703002929688,
+      "val_acc": 0.31486486486486487,
+      "epoch_seconds": 18.313002000038978
+    },
+    {
+      "epoch": 5,
+      "train_loss": 1.4029642731114162,
+      "val_loss": 3.0938057899475098,
+      "val_acc": 0.33378378378378376,
+      "epoch_seconds": 18.328784200013615
+    },
+    {
+      "epoch": 6,
+      "train_loss": 0.8454054594039917,
+      "val_loss": 3.205063581466675,
+      "val_acc": 0.32432432432432434,
+      "epoch_seconds": 18.412045300006866
+    },
+    {
+      "epoch": 7,
+      "train_loss": 0.5168024034448009,
+      "val_loss": 3.3204357624053955,
+      "val_acc": 0.3310810810810811,
+      "epoch_seconds": 18.19003200001316
+    },
+    {
+      "epoch": 8,
+      "train_loss": 0.3188202960895059,
+      "val_loss": 3.3991990089416504,
+      "val_acc": 0.3256756756756757,
+      "epoch_seconds": 18.405778100015596
+    },
+    {
+      "epoch": 9,
+      "train_loss": 0.20950928672415312,
+      "val_loss": 3.500739336013794,
+      "val_acc": 0.3216216216216216,
+      "epoch_seconds": 18.541596599970944
+    }
+  ]
+}

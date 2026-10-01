@@ -1,0 +1,42 @@
+{
+  "seed": 42,
+  "ratios": {
+    "train": 0.8,
+    "val": 0.1,
+    "test": 0.1
+  },
+  "near_dup_threshold": 0.8,
+  "raw_sha256": "bd7586b619d62a03bdd424f2953dbf9067c36c16a15e24938f6ca41eb3a6bc3a",
+  "counts": {
+    "questions": {
+      "train": 28141,
+      "test": 3515,
+      "val": 3515
+    },
+    "rows": {
+      "train": 36885,
+      "test": 4702,
+      "val": 4546
+    },
+    "task_a_questions": {
+      "train": 5848,
+      "val": 740,
+      "test": 722
+    },
+    "task_a_by_tier": {
+      "test": {
+        "constitution": 344,
+        "statute": 378
+      },
+      "train": {
+        "constitution": 2824,
+        "statute": 3024
+      },
+      "val": {
+        "constitution": 356,
+        "statute": 384
+      }
+    }
+  },
+  "questions_sha256": "aea935d4af36db6f8a89c3a66f152b2307363d601789d6e3393b23cf2007b49d"
+}

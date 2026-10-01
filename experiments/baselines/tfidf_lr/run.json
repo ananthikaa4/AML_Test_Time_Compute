@@ -1,0 +1,27 @@
+{
+  "model": "tfidf_lr",
+  "seed": 42,
+  "best_params": {
+    "features": "word_char",
+    "C": 100
+  },
+  "val_accuracy_at_selection": 0.3027027027027027,
+  "grid": {
+    "features": [
+      "word",
+      "word_char"
+    ],
+    "C": [
+      1,
+      10,
+      100,
+      1000
+    ]
+  },
+  "max_features": 50000,
+  "train_seconds": 214.57471227645874,
+  "n_train": 5848,
+  "n_classes": 1932,
+  "python": "3.12.10",
+  "selection_metric": "val accuracy (all Task A)"
+}

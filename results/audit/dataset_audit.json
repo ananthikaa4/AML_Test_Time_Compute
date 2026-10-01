@@ -1,0 +1,397 @@
+{
+  "file": {
+    "path": "data/raw/Alpie-core_core_indian_law.json",
+    "size_bytes": 258243053,
+    "sha256": "bd7586b619d62a03bdd424f2953dbf9067c36c16a15e24938f6ca41eb3a6bc3a",
+    "top_level_type": "list"
+  },
+  "schema": {
+    "key_sets": {
+      "complex_cot|prompt|response": 47789
+    }
+  },
+  "n_rows": 47789,
+  "columns": [
+    "prompt",
+    "complex_cot",
+    "response"
+  ],
+  "dtypes": {
+    "prompt": [
+      "str"
+    ],
+    "complex_cot": [
+      "str"
+    ],
+    "response": [
+      "str"
+    ]
+  },
+  "missing": {
+    "prompt": {
+      "null": 0,
+      "empty_or_whitespace": 0
+    },
+    "complex_cot": {
+      "null": 0,
+      "empty_or_whitespace": 0
+    },
+    "response": {
+      "null": 0,
+      "empty_or_whitespace": 0
+    }
+  },
+  "lengths": {
+    "prompt": {
+      "chars": {
+        "mean": 114.81,
+        "std": 48.02,
+        "p0": 12.0,
+        "p5": 51.0,
+        "p25": 81.0,
+        "p50": 107.0,
+        "p75": 141.0,
+        "p95": 203.0,
+        "p99": 258.0,
+        "p100": 1025.0
+      },
+      "words": {
+        "mean": 18.66,
+        "std": 7.69,
+        "p0": 3.0,
+        "p5": 9.0,
+        "p25": 13.0,
+        "p50": 17.0,
+        "p75": 23.0,
+        "p95": 33.0,
+        "p99": 42.0,
+        "p100": 135.0
+      }
+    },
+    "complex_cot": {
+      "chars": {
+        "mean": 3205.45,
+        "std": 2469.47,
+        "p0": 1.0,
+        "p5": 1001.0,
+        "p25": 1691.0,
+        "p50": 2759.0,
+        "p75": 3959.0,
+        "p95": 6812.5999999999985,
+        "p99": 12024.600000000013,
+        "p100": 167589.0
+      },
+      "words": {
+        "mean": 496.99,
+        "std": 401.0,
+        "p0": 1.0,
+        "p5": 154.0,
+        "p25": 258.0,
+        "p50": 417.0,
+        "p75": 609.0,
+        "p95": 1084.5999999999985,
+        "p99": 1960.0,
+        "p100": 27062.0
+      }
+    },
+    "response": {
+      "chars": {
+        "mean": 1956.94,
+        "std": 1478.25,
+        "p0": 2.0,
+        "p5": 366.0,
+        "p25": 1019.0,
+        "p50": 1812.0,
+        "p75": 2597.0,
+        "p95": 4140.0,
+        "p99": 5896.0,
+        "p100": 151824.0
+      },
+      "words": {
+        "mean": 282.39,
+        "std": 209.65,
+        "p0": 1.0,
+        "p5": 59.0,
+        "p25": 154.0,
+        "p50": 263.0,
+        "p75": 370.0,
+        "p95": 590.0,
+        "p99": 834.1200000000026,
+        "p100": 21788.0
+      }
+    }
+  },
+  "duplicates": {
+    "exact_full_row": 23,
+    "exact_prompt": 11841,
+    "normalized_prompt": 11885,
+    "normalized_prompt_and_response": 114,
+    "exact_response": 203,
+    "prompt_groups_with_multiple_rows": 9784,
+    "largest_prompt_group": 86,
+    "prompt_groups_with_conflicting_responses": 9704,
+    "most_repeated_prompts": [
+      {
+        "prompt": "can state legislatures introduce additional measures to support and empower scheduled castes scheduled tribes and women chairpersons",
+        "count": 86
+      },
+      {
+        "prompt": "how do these provisions align with broader national goals or policies related to social justice equality and inclusion",
+        "count": 86
+      },
+      {
+        "prompt": "what are the potential long term implications of implementing these reservation requirements in panchayats",
+        "count": 85
+      },
+      {
+        "prompt": "are there any ongoing debates or discussions around the effectiveness and fairness of these reservation requirements for panchayat positions",
+        "count": 84
+      },
+      {
+        "prompt": "what are the changes brought about by the constitution first amendment act 1951 s 13 in terms of office tenure for the person who was auditor general ",
+        "count": 43
+      },
+      {
+        "prompt": "chapter number 16 under offences affecting the human body",
+        "count": 28
+      },
+      {
+        "prompt": "how does leave of absence work for the comptroller and auditor general of india under this provision",
+        "count": 24
+      },
+      {
+        "prompt": "how does the comptroller and auditor general s term of office change under this provision",
+        "count": 22
+      },
+      {
+        "prompt": "what are the changes brought about by the constitution first amendment act 1951 s 13 in terms of salaries and pensions for the person who was auditor ",
+        "count": 22
+      },
+      {
+        "prompt": "how does the continuation of office work for the person who was auditor general immediately before the commencement of this constitution according to ",
+        "count": 20
+      }
+    ]
+  },
+  "near_duplicates_prompt": {
+    "threshold": 0.9,
+    "rows_with_neighbor_above_threshold": 22559,
+    "fraction": 0.4721,
+    "nn_similarity_quantiles": {
+      "p50": 0.824,
+      "p75": 1.0,
+      "p90": 1.0,
+      "p95": 1.0,
+      "p99": 1.0
+    },
+    "examples_non_identical": [
+      {
+        "i": 35,
+        "j": 6427,
+        "cosine": 0.908,
+        "text_i": "What is the limitation period for filing a suit for malicious prosecution?",
+        "text_j": "What is the limitation period for filing a suit for compensation for malicious prosecution?"
+      },
+      {
+        "i": 45,
+        "j": 22996,
+        "cosine": 0.944,
+        "text_i": "Discuss the role of the Intellectual Property Appellate Board (IPAB) in India. What types of cases does it handle?",
+        "text_j": "What is the role of the Intellectual Property Appellate Board (IPAB) in India, and what types of cases does it handle?"
+      },
+      {
+        "i": 54,
+        "j": 6886,
+        "cosine": 0.985,
+        "text_i": "What is the role of the Registrar of Firms in the registration and regulation of partnership firms in India?",
+        "text_j": "Explain the role of the Registrar of Firms in the registration and regulation of partnership firms in India."
+      },
+      {
+        "i": 81,
+        "j": 10812,
+        "cosine": 0.924,
+        "text_i": "Under the Motor Vehicles Act, 1988, what is the minimum third-party insurance cover required for a private car in India?",
+        "text_j": "Under the Motor Vehicles Act, what is the minimum third-party insurance cover required for a private car in India?"
+      },
+      {
+        "i": 103,
+        "j": 12955,
+        "cosine": 0.972,
+        "text_i": "What are the legal provisions for the regulation of noise pollution in India under the Noise Pollution (Regulation and Control) Rules, 2000?",
+        "text_j": "What are the provisions for the regulation of noise pollution in India under the Noise Pollution (Regulation and Control) Rules, 2000?"
+      }
+    ]
+  },
+  "task_format": {
+    "prompts_with_mcq_pattern": 382,
+    "prompts_ending_with_question_mark": 38665,
+    "prompts_yes_no_style_start": 4142,
+    "responses_starting_yes_or_no": 2851,
+    "prompt_first_word_top20": {
+      "what": 20269,
+      "how": 6039,
+      "explain": 4542,
+      "discuss": 3221,
+      "can": 2617,
+      "a": 1431,
+      "when": 1091,
+      "are": 954,
+      "which": 817,
+      "who": 783,
+      "in": 532,
+      "article": 465,
+      "under": 458,
+      "analyze": 445,
+      "is": 318,
+      "describe": 226,
+      "ramesh": 198,
+      "mr.": 164,
+      "advocate": 163,
+      "the": 157
+    },
+    "prompts_context_dependent": 667,
+    "context_dependent_examples": [
+      "How are 'Shall' and 'May' interpreted in statutes, and what factors would a court consider in deciding whether 'Shall' is mandatory or directory in a given context?",
+      "The Wildlife Protection Act, 1972 prohibits hunting of endangered species. A person claims they hunted an endangered species for self-defense. Discuss the defense of necessity and how the Act should b",
+      "The government wants to acquire land in Kerala for a solar power project. Discuss the issues related to environmental clearance and land acquisition in this context.",
+      "In a case involving intellectual property rights in Mumbai, the plaintiff relies on documentary evidence to prove ownership. Discuss the admissibility and relevance of secondary evidence in this conte",
+      "What are India's rights and obligations concerning the passage of foreign warships through its territorial waters?",
+      "A agrees to supply B with 'necessary articles' suitable to B's condition in life. What constitutes 'necessary articles' in this context?",
+      "During a property dispute in Mumbai, a 50-year-old land deed is presented in court. What is the relevance of Section 90 of the Evidence Act concerning this document?",
+      "A document is produced in court claiming that it is the last will and testament of Mr. Sharma from Jaipur. What steps must be taken to prove the genuineness of this document under the Indian Evidence "
+    ]
+  },
+  "reasoning_field": {
+    "field": "complex_cot",
+    "empty": 0,
+    "contains_think_or_answer_markers": 11803,
+    "contains_first_80_chars_of_response": 511,
+    "note": "complex_cot is gold reasoning; it must never be given to the evaluated model at inference."
+  },
+  "domain_signals": {
+    "definition": "regex heuristics over prompt+response; see INDIAN_MARKERS / FOREIGN_MARKERS in code",
+    "rows_with_indian_marker": 28024,
+    "rows_with_foreign_marker": 2745,
+    "rows_with_foreign_but_no_indian_marker": 1629,
+    "rows_with_neither": 18136,
+    "foreign_only_examples": [
+      "Jane, a Christian, alleges adultery by her husband, Peter. What is the standard of proof required to establish adultery as a ground for divorce under the Divorce Act, 1869?",
+      "What is the difference between a simple mortgage and an usufructuary mortgage under the Transfer of Property Act, 1882? Provide examples from real estate transactions in Chennai.",
+      "A trust is created in Tamil Nadu for the maintenance of a temple. What are the specific provisions of the Hindu Religious and Charitable Endowments Act that might apply?",
+      "How does the RFCTLARR Act address the issue of adverse possession of land?",
+      "Explain the duties of a manufacturer under the Consumer Protection Act, 2019.",
+      "A statute provides for 'compensation' to victims of a certain crime. How is the amount of compensation determined?",
+      "What is the importance of showing 'past conduct' between parties applying for specific performance under the Specific Relief Act?",
+      "Discuss the concept of 'Input Tax Credit' (ITC) under GST, and how it can be utilized to offset output tax liability."
+    ],
+    "neither_examples": [
+      "Explain the concept of 'workman' as defined under the Industrial Disputes Act, 1947, and how it applies to a software engineer employed on a contractual basis in Bangalore.",
+      "What is the role of 'Judicial Precedent' in the interpretation of statutes, and how does 'Stare Decisis' affect the process?",
+      "Explain the concept of 'severability' in arbitration agreements and its importance.",
+      "Discuss the role of a 'protector' in a trust, and the powers that can be conferred upon them.",
+      "How does the Arbitration and Conciliation Act, 1996, deal with the issue of multi-party arbitration?",
+      "Explain the 'Order XXI Rule 32' of CPC related to Execution of decree for specific performance. Illustrate with a case where the judgment debtor fails to execute the sale deed, despite a decree for sp",
+      "What are the restrictions on the purchase by a company, 'Trivandrum Spices Ltd.', of its own shares?",
+      "Section 25 of the Limitation Act deals with the acquisition of easement rights. How is the period of 'peaceable enjoyment' calculated for acquiring an easement?"
+    ],
+    "rows_with_devanagari": 58,
+    "non_ascii_char_fraction_prompt": 7e-05
+  },
+  "legal_categories": {
+    "explicit_category_field": null,
+    "prompts_mentioning_a_named_act_with_year": 8078,
+    "prompts_mentioning_article": 3263,
+    "prompts_mentioning_section": 2047,
+    "top_acts_in_prompts": {
+      "IT Act 2000": 505,
+      "Property Act 1882": 469,
+      "Conciliation Act 1996": 468,
+      "Consumer Protection Act 2019": 379,
+      "Limitation Act 1963": 335,
+      "Indian Evidence Act 1872": 312,
+      "Companies Act 2013": 310,
+      "Negotiable Instruments Act 1881": 293,
+      "Motor Vehicles Act 1988": 240,
+      "Seventh Amendment) Act 1956": 193,
+      "Income Tax Act 1961": 190,
+      "Indian Contract Act 1872": 184,
+      "Industrial Disputes Act 1947": 156,
+      "Indian Partnership Act 1932": 115,
+      "Specific Relief Act 1963": 112,
+      "Amendment) Act 1978": 109,
+      "Land Acquisition Act 2013": 107,
+      "Amendment) Act 1976": 102,
+      "First Amendment) Act 1951": 100,
+      "Resettlement Act 2013": 80,
+      "Information Technology Act 2000": 79,
+      "Amendment) Act 1975": 76,
+      "Indian Trusts Act 1882": 75,
+      "Land Acquisition Act 1894": 68,
+      "Reorganisation) Act 1971": 68,
+      "Amendment) Act 2003": 64,
+      "Hindu Marriage Act 1955": 45,
+      "Amendment) Act 1992": 43,
+      "Diu Reorganisation Act 1987": 43,
+      "Factories Act 1948": 41
+    },
+    "distinct_acts_in_prompts": 512
+  },
+  "templating_signal": {
+    "prompts_mentioning_major_city": 2457,
+    "city_counts": {
+      "Delhi": 521,
+      "Mumbai": 408,
+      "Chennai": 301,
+      "Kolkata": 292,
+      "Bangalore": 274,
+      "Jaipur": 174,
+      "Hyderabad": 164,
+      "Lucknow": 121,
+      "Ahmedabad": 95,
+      "Pune": 77,
+      "Guwahati": 51,
+      "Chandigarh": 40,
+      "Kochi": 39,
+      "Bhopal": 39,
+      "Bengaluru": 6
+    }
+  },
+  "split_and_labels": {
+    "predefined_split": "none (single file, no split column)",
+    "label_columns": [],
+    "difficulty_labels": "none",
+    "task_type": "free-form question -> long-form answer generation (with reasoning trace)"
+  },
+  "random_samples": [
+    {
+      "row": 12892,
+      "prompt": "Explain the role of the 'Sub-Registrar' in property registration in India.",
+      "response": "The Sub-Registrar plays a pivotal role in the property registration process in India, functioning as an assistant to the Registrar. Here's a structured overview of their responsibilities and functions:\n\n1. **Assistant to the Registrar**: Sub-Registrars work under the guidance of Registrars, typicall"
+    },
+    {
+      "row": 30437,
+      "prompt": "What are the powers of the commission while investigating any matter?",
+      "response": "The powers of a commission while investigating any matter are typically broad and designed to enable it to effectively gather information and conduct a thorough inquiry. These powers generally include:\n\n1.  **Power to summon and enforce the attendance of any person and examine them on oath:**  This "
+    },
+    {
+      "row": 24425,
+      "prompt": "Which payment modes are covered in ‘prescribed electronic modes’ for the provision of Sections 40A(3), 269SS, 269ST, 269SU, and 269T?",
+      "response": "The ‘prescribed electronic modes’ for the provision of Sections 40A(3), 269SS, 269ST, 269SU, and 269T, as defined in Rule 6ABBA of the Income Tax Rules, 1962, are as follows:\n\n1.  Credit Card\n2.  Debit Card\n3.  Net Banking\n4.  IMPS (Immediate Payment Service)\n5.  UPI (Unified Payments Interface)\n6. "
+    },
+    {
+      "row": 14710,
+      "prompt": "Under Muslim law, can a woman inherit property from her husband's relatives?",
+      "response": "In Islamic inheritance law, the ability of a woman to inherit from her husband's relatives depends on the deceased's will and the legal framework governing property distribution. Here’s a structured summary of the key points:\n\n1. **Islamic Inheritance Law Basics**: \n   - Inheritance is governed by b"
+    },
+    {
+      "row": 1958,
+      "prompt": "Discuss the process of arbitration in partnership disputes under the Indian Arbitration and Conciliation Act, 1996.",
+      "response": "**Arbitration in Partnership Disputes Under the Indian Arbitration and Conciliation Act, 1996: A Comprehensive Overview**\n\n**Introduction:**\nArbitration is an alternative dispute resolution method that offers a structured, efficient, and private approach to resolving partnership disputes. The Indian"
+    },
+    {
+      "row": 40646,
+      "prompt": "What happens to the reference until the relevant figures for the first census taken after the year 2026 have been published?",
+      "response": "The reference remains in place and continues to be used as it is currently defined, based on the data and methodology established prior to the publication of figures from the first census taken after the year 2026. It will continue to be used until the point in time when the relevant figures from th"
+    }
+  ]
+}

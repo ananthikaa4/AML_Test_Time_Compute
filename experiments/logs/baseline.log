@@ -1,0 +1,60 @@
+2026-09-27 15:58:22,705 INFO baseline: Task A sizes: {'train': 5848, 'val': 740, 'test': 722}
+2026-09-27 16:02:41,741 INFO baseline: tfidf_lr {'features': 'word', 'C': 1} val acc=0.1432 macroF1=0.0525 (259s)
+2026-09-27 16:03:04,913 INFO baseline: tfidf_lr {'features': 'word', 'C': 10} val acc=0.2608 macroF1=0.1583 (23s)
+2026-09-27 16:03:33,509 INFO baseline: tfidf_lr {'features': 'word', 'C': 100} val acc=0.2757 macroF1=0.1825 (29s)
+2026-09-27 16:07:13,252 INFO baseline: tfidf_lr {'features': 'word_char', 'C': 1} val acc=0.2257 macroF1=0.1119 (220s)
+2026-09-27 16:09:57,236 INFO baseline: tfidf_lr {'features': 'word_char', 'C': 10} val acc=0.2878 macroF1=0.1851 (164s)
+2026-09-27 16:14:11,225 INFO baseline: tfidf_lr {'features': 'word_char', 'C': 100} val acc=0.3027 macroF1=0.2098 (254s)
+2026-09-27 16:14:11,225 INFO baseline: tfidf_lr best params {'features': 'word_char', 'C': 100} (val acc 0.3027); refitting
+2026-09-27 16:19:33,118 INFO baseline: tfidf_knn {'features': 'word', 'k': 1} val acc=0.2378 macroF1=0.1690 (1s)
+2026-09-27 16:19:33,730 INFO baseline: tfidf_knn {'features': 'word', 'k': 5} val acc=0.2486 macroF1=0.1777 (1s)
+2026-09-27 16:19:34,343 INFO baseline: tfidf_knn {'features': 'word', 'k': 15} val acc=0.2514 macroF1=0.1603 (1s)
+2026-09-27 16:19:36,803 INFO baseline: tfidf_knn {'features': 'word_char', 'k': 1} val acc=0.2649 macroF1=0.1866 (2s)
+2026-09-27 16:19:39,430 INFO baseline: tfidf_knn {'features': 'word_char', 'k': 5} val acc=0.2662 macroF1=0.1888 (3s)
+2026-09-27 16:19:41,899 INFO baseline: tfidf_knn {'features': 'word_char', 'k': 15} val acc=0.2608 macroF1=0.1647 (2s)
+2026-09-27 16:19:41,900 INFO baseline: tfidf_knn best params {'features': 'word_char', 'k': 5} (val acc 0.2662); refitting
+2026-09-27 16:19:46,751 INFO baseline: 
+    model split group        value   n  accuracy  acc_ci_low  acc_ci_high  macro_f1     top5  ceiling
+ tfidf_lr   val   all          all 740  0.302703    0.270236     0.336486  0.209830 0.483784 0.817568
+ tfidf_lr   val  tier constitution 356  0.469101    0.418539     0.519663  0.435631 0.705056 0.971910
+ tfidf_lr   val  tier      statute 384  0.148438    0.111979     0.184896  0.087474 0.278646 0.674479
+ tfidf_lr  test   all          all 722  0.296399    0.263158     0.329640  0.191596 0.472299 0.799169
+ tfidf_lr  test  tier constitution 344  0.488372    0.438953     0.537791  0.405811 0.688953 0.973837
+ tfidf_lr  test  tier      statute 378  0.121693    0.089947     0.156085  0.064612 0.275132 0.640212
+tfidf_knn   val   all          all 740  0.266216    0.233784     0.297297  0.188823 0.420270 0.817568
+tfidf_knn   val  tier constitution 356  0.410112    0.362360     0.460674  0.383000 0.626404 0.971910
+tfidf_knn   val  tier      statute 384  0.132812    0.098958     0.169271  0.085193 0.229167 0.674479
+tfidf_knn  test   all          all 722  0.260388    0.228532     0.292244  0.177507 0.426593 0.799169
+tfidf_knn  test  tier constitution 344  0.418605    0.369186     0.470930  0.355420 0.639535 0.973837
+tfidf_knn  test  tier      statute 378  0.116402    0.084656     0.148148  0.072362 0.232804 0.640212
+2026-09-27 16:24:21,660 INFO baseline: Task A sizes: {'train': 5848, 'val': 740, 'test': 722}
+2026-09-27 16:28:50,887 INFO baseline: tfidf_lr {'features': 'word', 'C': 1} val acc=0.1432 macroF1=0.0525 (269s)
+2026-09-27 16:29:58,168 INFO baseline: tfidf_lr {'features': 'word', 'C': 10} val acc=0.2608 macroF1=0.1583 (67s)
+2026-09-27 16:31:22,309 INFO baseline: tfidf_lr {'features': 'word', 'C': 100} val acc=0.2757 macroF1=0.1825 (84s)
+2026-09-27 16:32:50,594 INFO baseline: tfidf_lr {'features': 'word', 'C': 1000} val acc=0.2824 macroF1=0.1902 (88s)
+2026-09-27 16:37:01,201 INFO baseline: tfidf_lr {'features': 'word_char', 'C': 1} val acc=0.2257 macroF1=0.1119 (251s)
+2026-09-27 16:44:53,524 INFO baseline: tfidf_lr {'features': 'word_char', 'C': 10} val acc=0.2878 macroF1=0.1851 (472s)
+2026-09-27 16:51:31,438 INFO baseline: tfidf_lr {'features': 'word_char', 'C': 100} val acc=0.3027 macroF1=0.2098 (398s)
+2026-09-27 16:54:59,026 INFO baseline: tfidf_lr {'features': 'word_char', 'C': 1000} val acc=0.3000 macroF1=0.2090 (208s)
+2026-09-27 16:54:59,026 INFO baseline: tfidf_lr best params {'features': 'word_char', 'C': 100} (val acc 0.3027); refitting
+2026-09-27 16:58:44,628 INFO baseline: tfidf_knn {'features': 'word', 'k': 1} val acc=0.2378 macroF1=0.1690 (1s)
+2026-09-27 16:58:45,412 INFO baseline: tfidf_knn {'features': 'word', 'k': 5} val acc=0.2486 macroF1=0.1777 (1s)
+2026-09-27 16:58:46,152 INFO baseline: tfidf_knn {'features': 'word', 'k': 15} val acc=0.2514 macroF1=0.1603 (1s)
+2026-09-27 16:58:49,075 INFO baseline: tfidf_knn {'features': 'word_char', 'k': 1} val acc=0.2649 macroF1=0.1866 (3s)
+2026-09-27 16:58:52,137 INFO baseline: tfidf_knn {'features': 'word_char', 'k': 5} val acc=0.2662 macroF1=0.1888 (3s)
+2026-09-27 16:58:55,162 INFO baseline: tfidf_knn {'features': 'word_char', 'k': 15} val acc=0.2608 macroF1=0.1647 (3s)
+2026-09-27 16:58:55,162 INFO baseline: tfidf_knn best params {'features': 'word_char', 'k': 5} (val acc 0.2662); refitting
+2026-09-27 16:59:01,354 INFO baseline: 
+    model split group        value   n  accuracy  acc_ci_low  acc_ci_high  macro_f1     top5  ceiling
+ tfidf_lr   val   all          all 740  0.302703    0.270236     0.336486  0.209830 0.483784 0.817568
+ tfidf_lr   val  tier constitution 356  0.469101    0.418539     0.519663  0.435631 0.705056 0.971910
+ tfidf_lr   val  tier      statute 384  0.148438    0.111979     0.184896  0.087474 0.278646 0.674479
+ tfidf_lr  test   all          all 722  0.296399    0.263158     0.329640  0.191596 0.472299 0.799169
+ tfidf_lr  test  tier constitution 344  0.488372    0.438953     0.537791  0.405811 0.688953 0.973837
+ tfidf_lr  test  tier      statute 378  0.121693    0.089947     0.156085  0.064612 0.275132 0.640212
+tfidf_knn   val   all          all 740  0.266216    0.233784     0.297297  0.188823 0.420270 0.817568
+tfidf_knn   val  tier constitution 356  0.410112    0.362360     0.460674  0.383000 0.626404 0.971910
+tfidf_knn   val  tier      statute 384  0.132812    0.098958     0.169271  0.085193 0.229167 0.674479
+tfidf_knn  test   all          all 722  0.260388    0.228532     0.292244  0.177507 0.426593 0.799169
+tfidf_knn  test  tier constitution 344  0.418605    0.369186     0.470930  0.355420 0.639535 0.973837
+tfidf_knn  test  tier      statute 378  0.116402    0.084656     0.148148  0.072362 0.232804 0.640212

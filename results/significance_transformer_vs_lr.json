@@ -1,0 +1,32 @@
+{
+  "all": {
+    "system_a": "tfidf_lr",
+    "system_b": "inlegalbert_seed42",
+    "n": 722,
+    "acc_a": 0.296398891966759,
+    "acc_b": 0.30055401662049863,
+    "only_a_correct": 39,
+    "only_b_correct": 42,
+    "p_value": 0.8243132151052082
+  },
+  "constitution": {
+    "system_a": "tfidf_lr",
+    "system_b": "inlegalbert_seed42",
+    "n": 344,
+    "acc_a": 0.4883720930232558,
+    "acc_b": 0.49709302325581395,
+    "only_a_correct": 26,
+    "only_b_correct": 29,
+    "p_value": 0.7877061896700431
+  },
+  "statute": {
+    "system_a": "tfidf_lr",
+    "system_b": "inlegalbert_seed42",
+    "n": 378,
+    "acc_a": 0.12169312169312169,
+    "acc_b": 0.12169312169312169,
+    "only_a_correct": 13,
+    "only_b_correct": 13,
+    "p_value": 1.0
+  }
+}

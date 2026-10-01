@@ -1,0 +1,6 @@
+stage,run,model_name,lr,dropout,best_val_acc,best_epoch,epochs_run,train_seconds,peak_gpu_mb
+1,InLegalBERT_lr2e-05_do0.1_s42,law-ai/InLegalBERT,2e-05,0.1,0.34459459459459457,8,12,497.8799160999479,3524.7
+1,InLegalBERT_lr5e-05_do0.1_s42,law-ai/InLegalBERT,5e-05,0.1,0.32837837837837835,9,13,225.51566450000973,3543.0
+1,deberta-v3-base_lr2e-05_do0.1_s42,microsoft/deberta-v3-base,2e-05,0.1,0.2891891891891892,19,23,902.0702130999998,7149.7
+1,deberta-v3-base_lr5e-05_do0.1_s42,microsoft/deberta-v3-base,5e-05,0.1,0.3013513513513513,13,17,544.1853973000543,7151.5
+2,InLegalBERT_lr2e-05_do0.3_s42,law-ai/InLegalBERT,2e-05,0.3,0.32972972972972975,9,13,249.29057049995754,3552.9

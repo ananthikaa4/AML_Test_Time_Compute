@@ -1,0 +1,93 @@
+# Central experiment configuration. Values marked TBD depend on the task-design decision
+# pending after the dataset audit (see results/audit/dataset_audit.md) and are intentionally unset.
+seed: 42
+device: cuda
+
+data:
+  kaggle_dataset: alpie/indian-law
+  raw_file: data/raw/Alpie-core_core_indian_law.json
+  raw_sha256: bd7586b619d62a03  # prefix; full hash in results/audit/dataset_audit.json
+  processed_dir: data/processed
+  splits_dir: data/splits
+  # Near-duplicate prompts are grouped so a group never spans splits (leakage control).
+  # 0.8 chosen after inspecting pairs in [0.8, 0.9): many were true paraphrases.
+  near_dup_threshold: 0.8
+  split_ratios: {train: 0.8, val: 0.1, test: 0.1}
+
+preprocessing:
+  min_response_words: 5
+  max_response_words: 3000      # audit: p99 = 834 words; longer ones are malformed/concatenated
+  drop_orphan_prompts: true     # questions referring to text the model never sees
+  task_a_min_agreement: 0.5     # share of a question's references that must cite the gold provision first
+
+baselines:            # Phase 5, Task A; selection = val accuracy
+  max_features: 50000
+  models:
+    tfidf_lr:
+      # C=1000 added after the first search selected the grid edge (C=100).
+      grid: {features: [word, word_char], C: [1, 10, 100, 1000]}
+    tfidf_knn:
+      grid: {features: [word, word_char], k: [1, 5, 15]}
+
+transformer:          # Phase 6-7, Task A classifier; selection = val accuracy
+  fixed:
+    head_lr: 0.001
+    batch_size: 32
+    max_epochs: 25
+    patience: 4
+    warmup_ratio: 0.06
+    weight_decay: 0.01
+    max_length: 128     # questions: p99 = 43 words
+    pooling: cls
+    dropout: 0.1
+  # Staged (coordinate-wise) search: each stage is a grid over its keys with all other keys at
+  # the best values so far; the incumbent competes in every stage. A full 2x2x2 grid measured
+  # ~4 h on this GPU (InLegalBERT ~55 s/epoch, DeBERTa ~94 s/epoch), so it was staged.
+  search_stages:
+    - {model_name: [law-ai/InLegalBERT, microsoft/deberta-v3-base], lr: [0.00002, 0.00005]}
+    - {dropout: [0.3]}
+  final_seeds: [42, 43, 44]   # first is the primary model used downstream
+
+paths:
+  results: results
+  plots: plots
+  experiments: experiments
+
+reasoning_model:      # Model A (Phase 7b)
+  name: Qwen/Qwen2.5-1.5B-Instruct
+  run_name: qwen1.5b_lora_r16
+  finetune: lora
+  lora_r: 16
+  lora_alpha: 32
+  lora_dropout: 0.05
+  lora_target_modules: [q_proj, k_proj, v_proj, o_proj, gate_proj, up_proj, down_proj]
+  lr: 0.0002
+  weight_decay: 0.0
+  warmup_ratio: 0.03
+  epochs: 1
+  micro_batch_size: 8
+  grad_accum: 2
+  max_length: 384            # tokens (prompt + target)
+  max_target_words: 120      # SFT target = leading sentences of the reference, <= 120 words
+  max_train_examples: null   # null = all train rows; set after measuring throughput
+  n_val_loss_examples: 400
+  eval_every: 200            # optimiser steps
+  patience: 3
+  n_task_a_val: null         # null = all Task A val questions
+difficulty_model:     # Model B
+  name: TBD
+verifier:
+  name: TBD
+
+generation:
+  temperature: 0.7           # for sampled candidates (greedy used for single-shot)
+  top_p: 0.95
+  max_new_tokens: 200
+  max_seqs_per_batch: 32
+
+compute_budgets:      # number of sampled candidates
+  low: 4
+  medium: 8
+  high: 16
+  adaptive: {easy: 2, medium: 8, hard: 16}
+difficulty_thresholds: TBD

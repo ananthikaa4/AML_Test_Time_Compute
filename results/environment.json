@@ -1,0 +1,17 @@
+{
+  "python": "3.12.10",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "cpu": "Intel64 Family 6 Model 183 Stepping 1, GenuineIntel",
+  "cpu_physical_cores": 16,
+  "cpu_logical_cores": 24,
+  "ram_gb": 23.7,
+  "torch": "2.11.0+cu128",
+  "torch_cuda_build": "12.8",
+  "cuda_available": true,
+  "gpu": "NVIDIA GeForce RTX 5050 Laptop GPU",
+  "gpu_vram_gb": 7.96,
+  "gpu_compute_capability": "12.0",
+  "bf16_supported": true,
+  "cuda_matmul_smoke_test": true,
+  "nvidia_smi": "NVIDIA GeForce RTX 5050 Laptop GPU, 592.82, 8151 MiB, [N/A]"
+}

@@ -1,0 +1,148 @@
+{
+  "n_rows": 46133,
+  "n_questions": 35171,
+  "lengths_words": {
+    "Question": {
+      "median": 18.0,
+      "mean": 19.6,
+      "p99": 43.0
+    },
+    "Reference answer": {
+      "median": 266.0,
+      "mean": 284.4,
+      "p99": 839.6800000000003
+    },
+    "Reasoning trace (complex_cot)": {
+      "median": 423.0,
+      "mean": 504.2,
+      "p99": 1981.0
+    }
+  },
+  "references_per_question": {
+    "1": 26147,
+    "2": 7993,
+    "3": 725,
+    "4": 227,
+    "5": 12,
+    "6+": 67
+  },
+  "legal_area": {
+    "all": {
+      "general_other": 11740,
+      "constitutional": 7189,
+      "contract_commercial": 3211,
+      "property_land": 2825,
+      "corporate_finance_tax": 2134,
+      "evidence_procedure": 2034,
+      "criminal": 1896,
+      "consumer_regulatory": 1847,
+      "ip_technology": 1032,
+      "family_personal": 697,
+      "labour_employment": 566
+    },
+    "task_a": {
+      "general_other": 1816,
+      "constitutional": 1845,
+      "contract_commercial": 678,
+      "property_land": 366,
+      "corporate_finance_tax": 413,
+      "evidence_procedure": 536,
+      "criminal": 927,
+      "consumer_regulatory": 204,
+      "ip_technology": 380,
+      "family_personal": 88,
+      "labour_employment": 57
+    }
+  },
+  "task_a": {
+    "eligibility_reasons": {
+      "no_citation": 23488,
+      "ok": 7310,
+      "label_in_question": 3960,
+      "tied_labels": 334,
+      "low_agreement": 79
+    },
+    "n_labels": 2200,
+    "labels_with_1_question": 1268,
+    "labels_with_ge_5_questions": 370,
+    "share_of_questions_covered_by_top_100_labels": 0.357,
+    "top_20_labels": {
+      "art:21": 138,
+      "art:280": 109,
+      "art:19": 101,
+      "art:15": 91,
+      "art:352": 74,
+      "art:14": 70,
+      "sec:43|information technology act": 66,
+      "art:300A": 64,
+      "art:370": 49,
+      "sec:302|penal code": 47,
+      "art:371A": 44,
+      "sec:67|information technology act": 43,
+      "art:356": 43,
+      "art:131": 43,
+      "art:226": 41,
+      "sec:2|arbitration and conciliation act": 39,
+      "art:148": 38,
+      "sec:27|evidence act": 36,
+      "sec:45|evidence act": 36,
+      "art:371F": 36
+    },
+    "test_labels_unseen_in_train": 145,
+    "agreement_when_multi_reference": {
+      "count": 1846.0,
+      "mean": 0.804,
+      "std": 0.237,
+      "min": 0.5,
+      "25%": 0.5,
+      "50%": 1.0,
+      "75%": 1.0,
+      "max": 1.0
+    }
+  },
+  "top_question_terms": {
+    "court": 2994,
+    "constitution": 2782,
+    "property": 2730,
+    "rights": 2152,
+    "specific": 1666,
+    "land": 1551,
+    "related": 1460,
+    "regarding": 1419,
+    "contract": 1350,
+    "evidence": 1312,
+    "transfer": 1245,
+    "protection": 1243,
+    "context": 1209,
+    "supreme": 1173,
+    "tax": 1147,
+    "amendment": 1131,
+    "arbitration": 1040,
+    "public": 1031,
+    "president": 1000,
+    "limitation": 947,
+    "government": 944,
+    "council": 937,
+    "impact": 910,
+    "powers": 908,
+    "according": 902
+  },
+  "split_by_tier": {
+    "train": {
+      "constitution": 2824,
+      "statute": 3024,
+      "none": 22293
+    },
+    "val": {
+      "constitution": 356,
+      "statute": 384,
+      "none": 2775
+    },
+    "test": {
+      "constitution": 344,
+      "statute": 378,
+      "none": 2793
+    }
+  },
+  "response_truncated_rows": 692
+}

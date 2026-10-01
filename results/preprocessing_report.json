@@ -1,0 +1,141 @@
+{
+  "seed": 42,
+  "config": {
+    "data": {
+      "kaggle_dataset": "alpie/indian-law",
+      "raw_file": "data/raw/Alpie-core_core_indian_law.json",
+      "raw_sha256": "bd7586b619d62a03",
+      "processed_dir": "data/processed",
+      "splits_dir": "data/splits",
+      "near_dup_threshold": 0.8,
+      "split_ratios": {
+        "train": 0.8,
+        "val": 0.1,
+        "test": 0.1
+      }
+    },
+    "preprocessing": {
+      "min_response_words": 5,
+      "max_response_words": 3000,
+      "drop_orphan_prompts": true,
+      "task_a_min_agreement": 0.5
+    }
+  },
+  "steps": [
+    {
+      "step": "clean_text (NFKC, control chars, whitespace)",
+      "before": 47789,
+      "after": 47789,
+      "removed": 0,
+      "note": ""
+    },
+    {
+      "step": "drop empty prompt/response",
+      "before": 47789,
+      "after": 47789,
+      "removed": 0,
+      "note": ""
+    },
+    {
+      "step": "drop exact duplicate rows",
+      "before": 47789,
+      "after": 47766,
+      "removed": 23,
+      "note": ""
+    },
+    {
+      "step": "response length filter",
+      "before": 47766,
+      "after": 47576,
+      "removed": 190,
+      "note": "keep 5..3000 words"
+    },
+    {
+      "step": "drop context-dependent (orphan) prompts",
+      "before": 47576,
+      "after": 46133,
+      "removed": 1443,
+      "note": ""
+    }
+  ],
+  "raw_sha256": "bd7586b619d62a03bdd424f2953dbf9067c36c16a15e24938f6ca41eb3a6bc3a",
+  "n_questions": 35171,
+  "questions_with_multiple_references": 9024,
+  "task_a": {
+    "eligible": 7310,
+    "reason_counts": {
+      "no_citation": 23488,
+      "ok": 7310,
+      "label_in_question": 3960,
+      "tied_labels": 334,
+      "low_agreement": 79
+    },
+    "tier_counts": {
+      "statute": 3786,
+      "constitution": 3524
+    },
+    "distinct_labels": 2200
+  },
+  "near_dup_components": {
+    "threshold": 0.8,
+    "n_components": 32845,
+    "largest": 34,
+    "size_quantiles": {
+      "p50": 1.0,
+      "p90": 1.0,
+      "p99": 3.0
+    },
+    "questions_in_multi_question_components": 3874
+  },
+  "split_counts": {
+    "questions": {
+      "train": 28141,
+      "test": 3515,
+      "val": 3515
+    },
+    "rows": {
+      "train": 36885,
+      "test": 4702,
+      "val": 4546
+    },
+    "task_a_questions": {
+      "train": 5848,
+      "val": 740,
+      "test": 722
+    },
+    "task_a_by_tier": {
+      "test": {
+        "constitution": 344,
+        "statute": 378
+      },
+      "train": {
+        "constitution": 2824,
+        "statute": 3024
+      },
+      "val": {
+        "constitution": 356,
+        "statute": 384
+      }
+    }
+  },
+  "leakage_checks": {
+    "exact_question_overlap": {
+      "train_test": 0,
+      "train_val": 0,
+      "val_test": 0
+    },
+    "val_to_train_max_cosine": {
+      "max": 0.7997,
+      "p99": 0.7901,
+      "p50": 0.5123,
+      "n_at_or_above_0.8": 0
+    },
+    "test_to_train_max_cosine": {
+      "max": 0.7998,
+      "p99": 0.79,
+      "p50": 0.5068,
+      "n_at_or_above_0.8": 0
+    },
+    "identical_response_train_test": 0
+  }
+}

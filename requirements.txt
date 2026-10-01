@@ -1,0 +1,18 @@
+# PyTorch must be the CUDA 12.8+ build for the RTX 50-series (sm_120):
+#   pip install torch --index-url https://download.pytorch.org/whl/cu128
+torch
+kagglehub
+pandas
+numpy
+pyarrow
+scikit-learn
+matplotlib
+pyyaml
+psutil
+pytest
+joblib
+transformers
+peft
+accelerate
+# Demo UI (app/main.py):  .venv/Scripts/python -m streamlit run app/main.py
+streamlit==1.50.0
